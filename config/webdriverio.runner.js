@@ -1,5 +1,7 @@
+const {sync} = require('resolve');
 const {
     join,
-    dirname
+    dirname,
+    resolve
 } = require('path');
-require(join(dirname(resolve.sync('webdriverio')), 'lib/launcher'));
+require(join(dirname(sync('webdriverio')), 'lib/launcher'));

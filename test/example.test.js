@@ -1,6 +1,7 @@
 const {join} = require('path');
 const opts = require(join(__dirname, '../wdio.conf'));
 const Launcher = require(join(__dirname, '../config/webdriverio.runner'));
+console.log(Launcher);
 const wdio = new Launcher(opts.config);
 
 wdio.run().then(function (code) {
